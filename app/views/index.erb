@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+        <title>index.erb</title>
+  </head>
+  <body>
+
+    <ul>
+        <% @articles.each_with_index do |article, index| %>
+        <li>
+            <a href="/articles/<%= article.id %>">
+            <h4><%= "#{index+1} - #{article.title}" %></h4>
+            </a>
+        </li>
+        <% end %>
+    </ul>
+  <a href="/articles/new">Make a new article</a>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+        <title>show.erb</title>
+  </head>
+  <body>
+    
+ <!-- show individual article and render the @article's title and content - @article = params[:id] -->
+    <h2><%= @article.title %></h2>
+    <h3><%= @article.content %></h2>
+<br>
+
+
+    <form method="POST" action="">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <button type="submit" value="Submit">Delete This Article</button>
+    </form>
+  <br>
+
+  <a href="/articles">Go back to articles</a> | <a href="/new">Make a new article</a> | <a href="/edit">Edit this article</a>
+  </body>
+</html>

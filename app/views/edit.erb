@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+        <title>edit.erb</title>
+  </head>
+  <body>
+
+    <form method="POST" action="/articles/<%= @article.id %>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <p>Edit Existing Articles:</p>
+      <h3>Title: <input type="text" id="title" name="article[title]" value="<%= @article.title %>">
+      <br>
+      <h3>Content:</h3><br>
+      <textarea rows="10" cols="30" id="content" name="article[content]" value="<%= @article.content %>"></textarea>
+    <button type="submit" value="Submit"></button>
+    </form>
+
+
+  </body>
+</html>
